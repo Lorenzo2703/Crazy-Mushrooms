@@ -101,6 +101,15 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -2px;
+  margin-right: 0.5rem;
+  object-fit: cover;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -4488,7 +4497,7 @@ fieldset:disabled .btn {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -12058,10 +12067,13 @@ body {
   padding-top: 10rem;
   background: linear-gradient(
     to bottom,
-    #000 0%,
-    rgba(0, 0, 0, 0.9) 75%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 1) 0%,
+    rgba(40, 0, 114, 0.9) 20%,
+    rgba(40, 0, 114, 0.9) 40%,
+    rgb(5, 0, 34) 90%,
+    rgba(0, 0, 0, 1) 100%
   );
+  background-size: 100% 100%;
 }
 .about-section p {
   margin-bottom: 5rem;
