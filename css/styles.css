@@ -2859,7 +2859,7 @@ textarea.form-control-lg {
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   border-radius: 0.3rem;
 }
 
@@ -2868,7 +2868,7 @@ textarea.form-control-lg {
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   border-radius: 0.2rem;
 }
 
@@ -11992,7 +11992,7 @@ body {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 80%;
+  font-size: 70%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
@@ -12021,7 +12021,7 @@ body {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: linear-gradient(
@@ -12063,13 +12063,21 @@ body {
   }
 }
 
+.mt-custom {
+  margin-top: 60px;
+}
+
+.pb-custom {
+  padding-bottom: 60px !important;
+}
+
 .about-section {
   padding-top: 10rem;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
-    rgba(40, 0, 114, 0.9) 20%,
-    rgba(40, 0, 114, 0.9) 40%,
+    rgba(30, 0, 87, 0.9) 20%,
+    rgba(30, 0, 87, 0.9) 40%,
     rgb(5, 0, 34) 90%,
     rgba(0, 0, 0, 1) 100%
   );
