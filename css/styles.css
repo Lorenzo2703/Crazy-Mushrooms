@@ -12026,7 +12026,7 @@ body {
   letter-spacing: 0.8rem;
   background: linear-gradient(
     rgba(255, 255, 255, 0.8) 0%,
-    rgba(255, 255, 255, 0.4) 80%,
+    rgba(255, 255, 255, 0.6) 80%,
     rgba(255, 255, 255, 0) 100%
   );
   -webkit-text-fill-color: transparent;
@@ -12068,7 +12068,7 @@ body {
 }
 
 .pb-custom {
-  padding-bottom: 60px !important;
+  padding-bottom: 200px !important;
 }
 
 .about-section {
@@ -12077,9 +12077,12 @@ body {
     to bottom,
     rgba(0, 0, 0, 1) 0%,
     rgba(30, 0, 87, 0.9) 20%,
-    rgba(30, 0, 87, 0.9) 40%,
-    rgb(5, 0, 34) 90%,
-    rgba(0, 0, 0, 1) 100%
+    rgba(30, 0, 87, 0.9) 30%,
+    rgb(5, 0, 34) 50%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 1) 92%,
+    rgba(200, 200, 200, 1) 95%,
+    #f8f9fa 100%
   );
   background-size: 100% 100%;
 }
