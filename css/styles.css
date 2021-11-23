@@ -699,7 +699,7 @@ progress {
   .container {
     max-width: 540px;
   }
-  .btn-custom{
+  .btn-custom {
     width: fit-content;
     height: fit-content;
     font-size: 8 !important;
@@ -711,12 +711,12 @@ progress {
   .container {
     max-width: 720px;
   }
-  .btn-custom{
+
+  .btn-custom {
     width: fit-content;
     height: fit-content;
     font-size: 10px !important;
   }
- 
 }
 @media (min-width: 992px) {
   .container-lg,
@@ -725,7 +725,8 @@ progress {
   .container {
     max-width: 960px;
   }
-  .btn-custom{
+
+  .btn-custom {
     width: fit-content;
     height: fit-content;
     font-size: 12px !important;
@@ -739,7 +740,8 @@ progress {
   .container {
     max-width: 1140px;
   }
-  .btn-custom{
+
+  .btn-custom {
     width: fit-content;
     height: fit-content;
     font-size: 12px !important;
@@ -754,7 +756,8 @@ progress {
   .container {
     max-width: 1320px;
   }
-  .btn-custom{
+
+  .btn-custom {
     width: fit-content;
     height: fit-content;
     font-size: 12px !important;
@@ -3998,7 +4001,6 @@ fieldset:disabled .btn {
   background-size: 100%;
 }
 
-
 .navbar-nav-scroll {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
@@ -4322,8 +4324,8 @@ fieldset:disabled .btn {
 }
 
 .img-card {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   margin-top: 3px;
   margin-bottom: 3px;
@@ -11394,12 +11396,12 @@ body {
     transition: none;
     padding: 2rem 1.5rem;
     font-size: large;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.75);
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.6);
   }
   #mainNav .nav-link:hover {
     font-size: large;
-    font-weight: 700;
+    font-weight: 800;
     color: rgba(0, 0, 0, 1);
   }
   #mainNav .nav-link:active {
@@ -11412,18 +11414,17 @@ body {
     color: rgba(20, 20, 20, 1);
   }
   #mainNav.navbar-shrink .nav-link {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
     padding: 1.5rem 1.5rem 1.25rem;
-    border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     outline: none;
     border-bottom: 0.25rem solid #64a19d;
   }
@@ -11452,7 +11453,7 @@ body {
       rgba(0, 0, 0, 0) 95%,
       rgba(0, 0, 0, 0.9) 100%
     ),
-    url("../assets/img/Funghetti.png");
+    url("../assets/img/env\ funghetti\ \ \(1\).png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11504,21 +11505,73 @@ body {
   }
 }
 
+.blur {
+  visibility: hidden !important;
+  cursor: pointer;
+  height: 50px;
+
+  transition: 300ms ease-in-out;
+}
+
+.blur1 {
+  height: 100%;
+
+  visibility: visible !important;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.blur h4 {
+  visibility: visible !important;
+  border-bottom: 2px solid white;
+}
+
+.top-btn {
+  position: relative;
+  display: inline-block;
+  top: 240px;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-btn {
+    top: 440px;
+  }
+}
+
 .mt-custom {
   margin-top: 40px;
 }
 
+.hero {
+  position: relative;
+}
+
 .about-section {
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 80vh;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  min-height: 1200px !important;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 150px;
+  position: relative !important;
   background: linear-gradient(
       to top,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0) 95%,
       rgba(0, 0, 0, 0.9) 100%
     ),
-    url("../assets/img/Fucina\ Funghetti.png");
+    url("../assets/img/Fucina\ Funghetti.png"),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.9) 95%,
+      rgba(255, 255, 255, 1) 100%
+    );
 }
 
 .about-section p {
@@ -11532,7 +11585,7 @@ body {
   padding: 2rem;
 }
 
-.nonelogo{
+.nonelogo {
   width: 100%;
 }
 
@@ -11635,7 +11688,7 @@ body {
 }
 
 #discord:hover {
-  background-color: #5865F2;
+  background-color: #5865f2;
 }
 
 #insta:hover {

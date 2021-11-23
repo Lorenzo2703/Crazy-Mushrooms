@@ -69,7 +69,37 @@ var slideUp1 = {
   opacity: 0,
 };
 
-ScrollReveal().reveal(".masthead");
+const anArray = [
+  "../assets/img/Angel.png",
+  "../assets/img/Barbarian.png",
+  "../assets/img/Devil.png",
+  "../assets/img/Doctor.png",
+  "../assets/img/Goblin.png",
+  "../assets/img/Guardian.png",
+  "../assets/img/Hunter.png",
+  "../assets/img/Jester.png",
+  "../assets/img/Mage.png",
+  "../assets/img/Shaman.png",
+];
+
+function ngForFunctionality() {
+  let value = "";
+  anArray.forEach((post) => {
+    value += ` <div class="col-4  col-md-2"><img class="img-card"src="${post}" alt=""></div></div>`;
+  });
+  document.getElementById("for").innerHTML = value;
+}
+
+const cbox = document.querySelectorAll(".blur");
+
+for (let i = 0; i < cbox.length; i++) {
+  cbox[i].addEventListener("click", function () {
+    cbox[i].classList.toggle("blur1");
+  });
+}
+
+ngForFunctionality();
+
 ScrollReveal().reveal(".masthead-text", slideUp);
 ScrollReveal().reveal(".text-1", slideUp);
 ScrollReveal().reveal(".text-2", slideUp1);
