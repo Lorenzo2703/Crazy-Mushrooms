@@ -98,6 +98,12 @@ for (let i = 0; i < cbox.length; i++) {
   });
 }
 
+document.addEventListener("mousedown", function () {
+  for (let i = 0; i < cbox.length; i++) {
+    cbox[i].classList.remove("blur1");
+  }
+});
+
 ngForFunctionality();
 
 ScrollReveal().reveal(".masthead-text", slideUp);

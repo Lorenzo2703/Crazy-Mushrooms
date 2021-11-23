@@ -11554,10 +11554,10 @@ body {
 .about-section {
   background-repeat: no-repeat !important;
   background-size: contain !important;
-  min-height: 1200px !important;
+  min-height: 103vh !important;
   height: 100%;
   width: 100%;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   position: relative !important;
   background: linear-gradient(
       to top,
