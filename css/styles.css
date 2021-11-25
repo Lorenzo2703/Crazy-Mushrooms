@@ -101,6 +101,11 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.best {
+  margin-top: 100px !important;
+  padding-top: 50px !important;
+}
+
 .op {
   opacity: 0;
 }
@@ -699,23 +704,12 @@ progress {
   .container {
     max-width: 540px;
   }
-  .btn-custom {
-    width: fit-content;
-    height: fit-content;
-    font-size: 8 !important;
-  }
 }
 @media (min-width: 768px) {
   .container-md,
   .container-sm,
   .container {
     max-width: 720px;
-  }
-
-  .btn-custom {
-    width: fit-content;
-    height: fit-content;
-    font-size: 10px !important;
   }
 }
 @media (min-width: 992px) {
@@ -724,12 +718,6 @@ progress {
   .container-sm,
   .container {
     max-width: 960px;
-  }
-
-  .btn-custom {
-    width: fit-content;
-    height: fit-content;
-    font-size: 12px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -740,12 +728,6 @@ progress {
   .container {
     max-width: 1140px;
   }
-
-  .btn-custom {
-    width: fit-content;
-    height: fit-content;
-    font-size: 12px !important;
-  }
 }
 @media (min-width: 1400px) {
   .container-xxl,
@@ -755,12 +737,6 @@ progress {
   .container-sm,
   .container {
     max-width: 1320px;
-  }
-
-  .btn-custom {
-    width: fit-content;
-    height: fit-content;
-    font-size: 12px !important;
   }
 }
 .row {
@@ -11442,22 +11418,40 @@ body {
   border: 0;
 }
 
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .masthead {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 80vh;
+  min-height: 60vh;
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0) 95%,
       rgba(0, 0, 0, 0.9) 100%
     ),
-    url("../assets/img/env\ funghetti\ \ \(1\).png");
-  background-position: center;
-  background-repeat: no-repeat;
+    url("../assets/video/CM\ animated\ V2.mp4");
+
+  width: auto;
+  height: auto;
+  z-index: -100;
+
+  background: url(loop-hd.jpg) no-repeat;
+
   background-size: cover;
 }
+
 .masthead h1,
 .masthead .h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -11506,45 +11500,115 @@ body {
 }
 
 .blur {
-  visibility: hidden !important;
   cursor: pointer;
-  height: 50px;
-
-  transition: 300ms ease-in-out;
+  height: 30px;
+  transition: all 250ms linear, visibility 2000ms linear, transform 0ms !important;
 }
 
 .blur1 {
-  height: 100%;
-
+  height: 60%;
+  position: absolute;
+  z-index: 1000;
+  width: 50%;
+  transform: translate(-48%, -50%) !important;
+  top: 35%;
+  left: 50%;
+  opacity: 1;
   visibility: visible !important;
-  background: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  transition: 300ms ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.blur h4 {
+.blur p {
+  visibility: hidden !important;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%) !important;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 80%;
+}
+
+.blur1 p {
+  opacity: 1;
   visibility: visible !important;
-  border-bottom: 2px solid white;
+}
+
+.blur h6 {
+  position: relative;
+  visibility: visible;
+  font-size: 11px;
+  border-bottom: 1px solid white;
 }
 
 .top-btn {
   position: relative;
   display: inline-block;
-  top: 240px;
+  top: 260px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 600px) {
   .top-btn {
-    top: 440px;
+    top: 280px;
+    font-size: 8px;
+  }
+
+  .op h6 {
+    visibility: hidden !important;
+  }
+
+  .blur1 {
+    height: 85%;
+    position: absolute;
+    z-index: 1000;
+    width: 90%;
+    transform: translate(-50%, -50%) !important;
+    top: 45%;
+    left: 50%;
+    opacity: 1;
+    visibility: visible !important;
+    font-size: 9px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .contact-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .best {
+    margin-top: 30px !important;
+    padding-top: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .top-btn {
+    top: 330px;
+    font-size: 8px;
   }
 }
 
 .mt-custom {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.mt-custom1 {
+  margin-top: 60px;
 }
 
 .hero {
@@ -11553,10 +11617,10 @@ body {
 
 .about-section {
   background-repeat: no-repeat !important;
-  background-size: contain !important;
-  min-height: 103vh !important;
+  background-size: cover !important;
+  min-height: 100vh !important;
   height: 100%;
-  width: 100%;
+  width: 100% !important;
   padding-bottom: 50px;
   position: relative !important;
   background: linear-gradient(
@@ -11572,6 +11636,14 @@ body {
       rgba(0, 0, 0, 0.9) 95%,
       rgba(255, 255, 255, 1) 100%
     );
+}
+
+@media only screen and (max-width: 600px) {
+  .about-section {
+    background-size: cover !important;
+    min-height: 55vh !important;
+    height: 80% !important;
+  }
 }
 
 .about-section p {
@@ -11638,12 +11710,10 @@ body {
 }
 
 .contact-section {
-  padding-top: 50px;
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
 }
-.contact-section .card {
-  border: 0;
-  border-bottom: 0.25rem solid #64a19d;
-}
+
 .contact-section .card h4,
 .contact-section .card .h4 {
   font-size: 0.8rem;
@@ -11659,7 +11729,7 @@ body {
   width: 3rem;
 }
 .contact-section .social {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 .contact-section .social a {
   text-align: center;

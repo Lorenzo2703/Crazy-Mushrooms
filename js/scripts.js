@@ -1,14 +1,6 @@
-/*!
- * Start Bootstrap - Grayscale v7.0.3 (https://startbootstrap.com/theme/grayscale)
- * Copyright 2013-2021 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
- */
-//
-// Scripts
-//
-
 window.addEventListener("DOMContentLoaded", (event) => {
   // Navbar shrink function
+
   var navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector("#mainNav");
     if (!navbarCollapsible) {
@@ -26,6 +18,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   // Shrink the navbar when page is scrolled
   document.addEventListener("scroll", navbarShrink);
+
+  var x = window.matchMedia("(max-width: 600px)");
+  myFunction(x); // Call listener function at run time
+  x.addEventListener(myFunction); // Attach listener function on state changes
 
   // Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector("#mainNav");
@@ -50,6 +46,37 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
+function myFunction(x) {
+  if (x.matches) {
+    // If media query matches
+    new Splide(".splide", {
+      type: "loop",
+      autoplay: true,
+      gap: 30,
+      perPage: 3,
+      interval: 3000,
+      padding: 30,
+      speed: 800,
+      perMove: 1,
+      pauseOnHover: false,
+      resetProgress: false,
+    }).mount();
+  } else {
+    new Splide(".splide", {
+      type: "loop",
+      autoplay: true,
+      gap: 100,
+      perPage: 3,
+      interval: 3000,
+      padding: 100,
+      speed: 800,
+      perMove: 1,
+      pauseOnHover: false,
+      resetProgress: false,
+    }).mount();
+  }
+}
+
 window.onload = function () {
   location.href = "index.html#page-top";
 };
@@ -63,8 +90,29 @@ var slideUp = {
 };
 var slideUp1 = {
   distance: "500%",
-  duration: 1000,
+  duration: 1500,
   delay: 300,
+  origin: "bottom",
+  opacity: 0,
+};
+var slideUp2 = {
+  distance: "500%",
+  duration: 1500,
+  delay: 800,
+  origin: "bottom",
+  opacity: 0,
+};
+var slideUp3 = {
+  distance: "500%",
+  duration: 1500,
+  delay: 1200,
+  origin: "bottom",
+  opacity: 0,
+};
+var slideUp4 = {
+  distance: "500%",
+  duration: 1500,
+  delay: 1700,
   origin: "bottom",
   opacity: 0,
 };
@@ -85,7 +133,11 @@ const anArray = [
 function ngForFunctionality() {
   let value = "";
   anArray.forEach((post) => {
-    value += ` <div class="col-4  col-md-2"><img class="img-card"src="${post}" alt=""></div></div>`;
+    value += `<li class="splide__slide">
+    <div class="splide__slide__container">
+        <img class="img-card" src="${post}">
+    </div>
+</li>`;
   });
   document.getElementById("for").innerHTML = value;
 }
@@ -95,25 +147,30 @@ const cbox = document.querySelectorAll(".blur");
 for (let i = 0; i < cbox.length; i++) {
   cbox[i].addEventListener("click", function () {
     cbox[i].classList.toggle("blur1");
+    for (let i = 0; i < cbox.length; i++) {
+      if (!cbox[i].classList.contains("blur1")) {
+        cbox[i].classList.add("op");
+      }
+    }
   });
 }
 
 document.addEventListener("mousedown", function () {
   for (let i = 0; i < cbox.length; i++) {
     cbox[i].classList.remove("blur1");
+    if (cbox[i].classList.contains("op")) {
+      cbox[i].classList.remove("op");
+    }
   }
 });
 
 ngForFunctionality();
 
 ScrollReveal().reveal(".masthead-text", slideUp);
-ScrollReveal().reveal(".text-1", slideUp);
-ScrollReveal().reveal(".text-2", slideUp1);
-ScrollReveal().reveal(".text-3", slideUp);
-ScrollReveal().reveal(".text-4", slideUp1);
+ScrollReveal().reveal(".text-1", slideUp1);
+ScrollReveal().reveal(".text-2", slideUp2);
+ScrollReveal().reveal(".text-3", slideUp3);
+ScrollReveal().reveal(".text-4", slideUp4);
 
-ScrollReveal().reveal(".featured", slideUp);
-ScrollReveal().reveal(".one", slideUp);
-ScrollReveal().reveal(".two", slideUp);
-ScrollReveal().reveal(".best", slideUp);
+ScrollReveal().reveal(".best1", slideUp1);
 ScrollReveal().reveal(".list", { delay: 500, duration: 1000 });
