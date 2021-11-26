@@ -5504,7 +5504,7 @@ fieldset:disabled .btn {
   top: 0;
   left: 0;
   z-index: 1050;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #000;
 }
@@ -11391,7 +11391,6 @@ body {
   }
   #mainNav.navbar-shrink .nav-link {
     color: rgba(255, 255, 255, 0.6);
-    padding: 1.5rem 1.5rem 1.25rem;
   }
   #mainNav.navbar-shrink .nav-link:hover {
     color: rgba(255, 255, 255, 1);
@@ -11419,8 +11418,8 @@ body {
 }
 
 #background-video {
-  width: 100vw;
-  height: 100vh;
+  width: 100% !important;
+  height: 100%;
   object-fit: cover;
   position: absolute;
   left: 0px;
@@ -11433,22 +11432,19 @@ body {
 .masthead {
   position: relative;
   width: 100%;
+  padding: 0px;
   height: 100%;
   min-height: 60vh;
   background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 95%,
-      rgba(0, 0, 0, 0.9) 100%
-    ),
-    url("../assets/video/CM\ animated\ V2.mp4");
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
 
   width: auto;
   height: auto;
   z-index: -100;
-
-  background: url(loop-hd.jpg) no-repeat;
-
   background-size: cover;
 }
 
@@ -11499,22 +11495,10 @@ body {
   }
 }
 
-.blur {
-  cursor: pointer;
-  height: 30px;
-  transition: all 250ms linear, visibility 2000ms linear, transform 0ms !important;
-}
-
-.blur1 {
-  height: 60%;
-  position: absolute;
-  z-index: 1000;
-  width: 50%;
-  transform: translate(-48%, -50%) !important;
-  top: 35%;
-  left: 50%;
-  opacity: 1;
-  visibility: visible !important;
+#input-text {
+  opacity: 0;
+  padding: 30px;
+  transition: all 300ms linear;
   font-size: 14px;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
@@ -11522,67 +11506,57 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  white-space: pre-line;
 }
 
-.blur p {
-  visibility: hidden !important;
-  opacity: 0;
+#input-text::before {
+  transition: all 300ms linear;
+  opacity: 0.7;
+  content: "Tap anywhere to cancel";
   position: absolute;
-  transform: translate(-50%, -50%) !important;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 80%;
+  z-index: 6000;
+  bottom: -60px;
+  padding: 12px;
+  color: white;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.blur1 p {
-  opacity: 1;
-  visibility: visible !important;
-}
-
-.blur h6 {
-  position: relative;
-  visibility: visible;
-  font-size: 11px;
+.h6-custom {
+  font-size: 10px;
+  width: 85%;
+  cursor: pointer;
   border-bottom: 1px solid white;
 }
 
 .top-btn {
   position: relative;
   display: inline-block;
-  top: 260px;
+  top: 190px;
   width: fit-content;
   height: fit-content;
   font-size: 14px;
 }
 
+@media only screen and (max-width: 992px) {
+  .h6-custom {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .top-btn {
-    top: 280px;
+    top: 180px;
     font-size: 8px;
   }
 
   .op h6 {
     visibility: hidden !important;
-  }
-
-  .blur1 {
-    height: 85%;
-    position: absolute;
-    z-index: 1000;
-    width: 90%;
-    transform: translate(-50%, -50%) !important;
-    top: 45%;
-    left: 50%;
-    opacity: 1;
-    visibility: visible !important;
-    font-size: 9px;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
   .contact-section {
@@ -11598,13 +11572,13 @@ body {
 
 @media only screen and (max-width: 400px) {
   .top-btn {
-    top: 330px;
+    top: 280px;
     font-size: 8px;
   }
 }
 
 .mt-custom {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .mt-custom1 {

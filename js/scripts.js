@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   var x = window.matchMedia("(max-width: 600px)");
   myFunction(x); // Call listener function at run time
-  x.addEventListener(myFunction); // Attach listener function on state changes
+  x.addListener(myFunction); // Attach listener function on state changes
 
   // Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector("#mainNav");
@@ -142,26 +142,42 @@ function ngForFunctionality() {
   document.getElementById("for").innerHTML = value;
 }
 
-const cbox = document.querySelectorAll(".blur");
+document.getElementById("text-1").addEventListener("click", function name() {
+  document.getElementById("input-text").style.opacity = "1";
+  document.getElementById("input-text").style.transition = "all 300ms linear;";
 
-for (let i = 0; i < cbox.length; i++) {
-  cbox[i].addEventListener("click", function () {
-    cbox[i].classList.toggle("blur1");
-    for (let i = 0; i < cbox.length; i++) {
-      if (!cbox[i].classList.contains("blur1")) {
-        cbox[i].classList.add("op");
-      }
-    }
-  });
-}
+  document.getElementById("input-text").innerHTML =
+    ' <h4 class=" text-white text-center p-2 mb-0"> WHO ARE WE?</h4> <strong><em>Threelab</em></strong> is a young startup, that was created with a unique aim:\ndeveloping a brand!\nnew MUSHROOM UNIVERSE (link) that easily links all the users to the PLAY TO EARN world. Our\nteam\nseeks to realize a new source of fun and entertainment, powered by the community itself. The\none\ntask that Threeelab oughts to accomplish is to always maintain high quality performances and\na\ntwo-sided relationship with the costumers.\n\n<strong>CRAZY MUSHROOMS</strong>\nCrazy mushrooms was created as a bridge between two extremely high yielding sectors: the\ngaming\nindustry and the crypto market.\nOur project is split into two main phases:\n* COLLECTING NFT;';
+});
 
-document.addEventListener("mousedown", function () {
-  for (let i = 0; i < cbox.length; i++) {
-    cbox[i].classList.remove("blur1");
-    if (cbox[i].classList.contains("op")) {
-      cbox[i].classList.remove("op");
-    }
-  }
+document.getElementById("text-2").addEventListener("click", function name() {
+  document.getElementById("input-text").style.opacity = "1";
+  document.getElementById("input-text").style.transition = "all 300ms linear;";
+
+  document.getElementById("input-text").innerHTML =
+    '<h4 class=" text-white text-center p-2  mb-0"> PLAYING THE GAME</h4>1. The first phase consists in the development of three-dimensional characters (NFT), animated\nand elaborated with care, every mushrooms will be developed through an algorithmic mixing\nstrategy, which grants SINGULARITY to each of them and DIFFERENT POWERS!\nThe characters will be dropped on the following marketplace, starting on 2nd Febrary 2022:\n-link-\n\n2. Throughout the duration of first phase the Treeelab team will provide for the users a brand\nnew game that features the use of the very MUSHROOMS! The game will be completely FREE TO PLAY,\nand, most importantly, available for IOS and Google Play! Crazy Mushrooms will give the\npossibility to EARN REAL MONEY to its players, by joining the platform\'s economic ecosystem.';
+});
+
+document.getElementById("text-3").addEventListener("click", function name() {
+  document.getElementById("input-text").style.opacity = "1";
+  document.getElementById("input-text").style.transition = "all 300ms linear;";
+
+  document.getElementById("input-text").innerHTML =
+    '<h4 class=" text-white text-center p-2  mb-0">WHAT ARE YOU WAITING FOR?!</h4> GO CHECK OUT OUR SHROOMS!!!\nTHE MUSHROOMS\nARE YOU READY TO BECOME A MUSHROOM MASTER?\nCOLLECT THE RAREST CHARACTERS! BRING THEM INTO\nTHE GAME, CREATE YOUR ARMY, BECOME THE\nSTRONGEST OF YOUR KINGDOM AND THEN OF THE ENTIRE\nMUSHROOMVERSE!!';
+});
+
+document.getElementById("text-4").addEventListener("click", function name() {
+  document.getElementById("input-text").style.opacity = "1";
+  document.getElementById("input-text").style.transition = "all 300ms linear;";
+
+  document.getElementById("input-text").innerHTML =
+    '<h4 class=" text-white text-center mb-0 p-2 text-uppercase">Collections </h4>Our mushrooms are divided in collections:\n1. MAGIC Nation\n2. ?? Upcoming…\n\nEvery collection contains mushrooms with different rarities and traits:\n* *\n*\n* *\n*\nOnly 2 deity (*)mushrooms will be dropped: the dates will be announced through\nour social channels, be sure to stay tuned!!\n-links-\n\n<strong> MUSHROOMS SHOULD NEVER KILL MUSHROOMS…\nBUT TO KEEP PEACE YOU MUST MOVE TO WAR…\nMushroom Ancient</strong>';
+});
+
+window.addEventListener("mousedown", function name() {
+  document.getElementById("input-text").style.transition = "all 300ms linear;";
+  document.getElementById("input-text").style.opacity = "0";
+  document.getElementById("input-text").innerHTML = "";
 });
 
 ngForFunctionality();
