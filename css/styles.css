@@ -10,6 +10,15 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
+
+* {
+  font-family: "Cinzel Decorative", cursive;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -96,7 +105,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: rgba(40, 40, 40, 1);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -111,7 +120,8 @@ body {
 }
 
 .nero {
-  height: 20px;
+  height: 200px;
+  z-index: 1;
   background-color: black;
 }
 
@@ -3916,6 +3926,7 @@ fieldset:disabled .btn {
   margin-right: 1rem;
   font-size: 1.55rem;
   text-decoration: none;
+
   white-space: nowrap;
 }
 .navbar-nav {
@@ -4309,7 +4320,6 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-brand {
-  background: #121fcf;
   background: linear-gradient(
     90deg,
     rgba(0, 255, 0, 1) 1%,
@@ -11343,9 +11353,10 @@ body {
 }
 #mainNav .navbar-brand {
   color: #000;
-  font-weight: 700;
+  font-weight: 800;
   padding: 0.9rem 0;
 }
+
 #mainNav .navbar-nav .nav-item:hover {
   color: fade(#fff, 90%);
   outline: none;
@@ -11372,12 +11383,12 @@ body {
     transition: none;
     padding: 2rem 1.5rem;
     font-size: large;
-    font-weight: 800;
+    font-weight: 900;
     color: rgba(0, 0, 0, 0.6);
   }
   #mainNav .nav-link:hover {
     font-size: large;
-    font-weight: 800;
+    font-weight: 900;
     color: rgba(0, 0, 0, 1);
   }
   #mainNav .nav-link:active {
@@ -11502,8 +11513,8 @@ body {
   font-size: 12px;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   white-space: pre-line;
@@ -11528,8 +11539,10 @@ body {
 }
 
 .h6-custom {
-  font-size: 10px;
+  font-size: 14px;
   width: 85%;
+  color: white;
+  font-family: "Lobster Two", cursive;
   cursor: pointer;
   border-bottom: 1px solid white;
 }
@@ -11538,6 +11551,7 @@ body {
   position: relative;
   display: inline-block;
   top: 190px;
+  z-index: 20000;
   width: fit-content;
   height: fit-content;
   font-size: 14px;
@@ -11547,12 +11561,21 @@ body {
   .h6-custom {
     width: 100%;
   }
+  .top-btn {
+    top: 300px;
+    font-size: 8px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .top-btn {
-    top: 180px;
+    top: 350px;
     font-size: 8px;
+  }
+
+  .nero {
+    height: 400px;
+    background-color: black;
   }
 
   .op h6 {
@@ -11572,7 +11595,7 @@ body {
 
 @media only screen and (max-width: 400px) {
   .top-btn {
-    top: 280px;
+    top: 300px;
     font-size: 8px;
   }
 }
