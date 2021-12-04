@@ -143,6 +143,9 @@ function ngForFunctionality() {
 }
 
 document.getElementById("text-2").addEventListener("click", function name() {
+  document.getElementById("coming").parentNode.style.display = "none";
+  document.getElementById("clessidra").parentNode.style.display = "none";
+
   setTimeout(function () {
     document.getElementById("text-2").style.color = "gold";
     document.getElementById("input-text").style.opacity = "1";
@@ -155,6 +158,9 @@ document.getElementById("text-2").addEventListener("click", function name() {
 });
 
 document.getElementById("text-3").addEventListener("click", function name() {
+  document.getElementById("coming").parentNode.style.display = "none";
+  document.getElementById("clessidra").parentNode.style.display = "none";
+
   setTimeout(function () {
     document.getElementById("text-3").style.color = "gold";
 
@@ -168,6 +174,9 @@ document.getElementById("text-3").addEventListener("click", function name() {
 });
 
 document.getElementById("text-4").addEventListener("click", function name() {
+  document.getElementById("coming").parentNode.style.display = "none";
+  document.getElementById("clessidra").parentNode.style.display = "none";
+
   setTimeout(function () {
     document.getElementById("text-4").style.color = "gold";
 
