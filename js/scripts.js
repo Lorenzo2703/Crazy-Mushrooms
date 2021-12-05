@@ -1,3 +1,4 @@
+var x = window.matchMedia("(max-width: 600px)");
 window.addEventListener("DOMContentLoaded", (event) => {
   // Navbar shrink function
 
@@ -7,8 +8,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
       return;
     }
     if (window.scrollY === 0) {
+      document.getElementById("treee").classList.add("d-none");
       navbarCollapsible.classList.remove("navbar-shrink");
     } else {
+      document.getElementById("treee").classList.remove("d-none");
       navbarCollapsible.classList.add("navbar-shrink");
     }
   };
@@ -19,7 +22,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Shrink the navbar when page is scrolled
   document.addEventListener("scroll", navbarShrink);
 
-  var x = window.matchMedia("(max-width: 600px)");
   myFunction(x); // Call listener function at run time
   x.addListener(myFunction); // Attach listener function on state changes
 
@@ -49,7 +51,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function myFunction(x) {
   if (x.matches) {
     // If media query matches
-    new Splide(".splide", {
+    const splide = new Splide(".splide", {
       type: "loop",
       autoplay: true,
       gap: 30,
@@ -61,8 +63,13 @@ function myFunction(x) {
       pauseOnHover: false,
       resetProgress: false,
     }).mount();
+
+    splide.on("resize", () => {
+      splide.destroy(true);
+      myFunction(x);
+    });
   } else {
-    new Splide(".splide", {
+    const splide1 = new Splide(".splide", {
       type: "loop",
       autoplay: true,
       gap: 100,
@@ -74,6 +81,11 @@ function myFunction(x) {
       pauseOnHover: false,
       resetProgress: false,
     }).mount();
+
+    splide1.on("resize", () => {
+      splide1.destroy(true);
+      myFunction(x);
+    });
   }
 }
 
@@ -143,8 +155,7 @@ function ngForFunctionality() {
 }
 
 document.getElementById("text-2").addEventListener("click", function name() {
-  document.getElementById("coming").parentNode.style.display = "none";
-  document.getElementById("clessidra").parentNode.style.display = "none";
+  document.getElementById("div-coming").style.display = "none";
 
   setTimeout(function () {
     document.getElementById("text-2").style.color = "gold";
@@ -158,8 +169,7 @@ document.getElementById("text-2").addEventListener("click", function name() {
 });
 
 document.getElementById("text-3").addEventListener("click", function name() {
-  document.getElementById("coming").parentNode.style.display = "none";
-  document.getElementById("clessidra").parentNode.style.display = "none";
+  document.getElementById("div-coming").style.display = "none";
 
   setTimeout(function () {
     document.getElementById("text-3").style.color = "gold";
@@ -174,8 +184,7 @@ document.getElementById("text-3").addEventListener("click", function name() {
 });
 
 document.getElementById("text-4").addEventListener("click", function name() {
-  document.getElementById("coming").parentNode.style.display = "none";
-  document.getElementById("clessidra").parentNode.style.display = "none";
+  document.getElementById("div-coming").style.display = "none";
 
   setTimeout(function () {
     document.getElementById("text-4").style.color = "gold";
