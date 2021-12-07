@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.addEventListener("scroll", navbarShrink);
 
   myFunction(x); // Call listener function at run time
-  x.addListener(myFunction); // Attach listener function on state changes
+  document.addEventListener("change", myFunction); // Attach listener function on state changes
 
   // Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector("#mainNav");
@@ -147,7 +147,7 @@ function ngForFunctionality() {
   anArray.forEach((post) => {
     value += `<li class="splide__slide">
     <div class="splide__slide__container">
-        <img class="img-card" src="${post}">
+        <img class="img-card" src="${post}"  alt="Funghetto">
     </div>
 </li>`;
   });
@@ -217,3 +217,28 @@ ScrollReveal().reveal(".text-4", slideUp4);
 
 ScrollReveal().reveal(".best1", slideUp1);
 ScrollReveal().reveal(".list", { delay: 500, duration: 1000 });
+
+var countDownDate = new Date("Feb 2, 2022 00:00:00").getTime();
+var x = setInterval(function () {
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("countdown").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);

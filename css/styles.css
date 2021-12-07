@@ -4340,7 +4340,7 @@ fieldset:disabled .btn {
     rgba(229, 37, 33, 1) 70%,
     rgba(67, 176, 71, 1) 100%
   );
- 
+
   background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6640,7 +6640,7 @@ fieldset:disabled .btn {
   align-self: stretch;
 }
 
-#treee{
+#treee {
   font-family: "Lobster Two" !important;
   font-size: 35px !important;
 }
@@ -11699,7 +11699,11 @@ body {
   padding: 4rem 0;
 }
 .projects-section .featured-text {
-  padding: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .nonelogo {
@@ -11708,7 +11712,7 @@ body {
 
 @media (min-width: 992px) {
   .projects-section .featured-text {
-    padding: 0 0 0 2rem;
+    padding: 2rem;
     border-left: 0.5rem solid #64a19d;
   }
 }
@@ -11807,11 +11811,26 @@ body {
 }
 
 #tik-tok:hover {
-  background: linear-gradient(45deg, #ff0050 0%, #000000 50%, #00f2ea 100%);
+  background: linear-gradient(
+    45deg,
+    #ff0050 0%,
+    #ff0050 10%,
+    #000000 50%,
+    #00f2ea 90%,
+    #00f2ea 100%
+  );
 }
 
 #discord:hover {
   background-color: #5865f2;
+}
+
+#discord-top{
+  color: #5865F2;
+}
+
+#discord-top:hover{
+  color: #583cFf;
 }
 
 #insta:hover {
