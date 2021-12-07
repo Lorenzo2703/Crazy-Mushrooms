@@ -90,7 +90,7 @@ function myFunction(x) {
 }
 
 window.onload = function () {
-  location.href = "index.html#page-top";
+  location.href = "#page-top";
 };
 
 var slideUp = {
