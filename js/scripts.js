@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.addEventListener("scroll", navbarShrink);
 
   myFunction(x); // Call listener function at run time
-  document.addEventListener("change", myFunction); // Attach listener function on state changes
+  document.addEventListener("change", myFunction(x)); // Attach listener function on state changes
 
   // Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector("#mainNav");
@@ -54,10 +54,10 @@ function myFunction(x) {
     const splide = new Splide(".splide", {
       type: "loop",
       autoplay: true,
-      gap: 30,
+      gap: 250,
       perPage: 3,
       interval: 3000,
-      padding: 30,
+      padding: 250,
       speed: 800,
       perMove: 1,
       pauseOnHover: false,
@@ -72,10 +72,10 @@ function myFunction(x) {
     const splide1 = new Splide(".splide", {
       type: "loop",
       autoplay: true,
-      gap: 100,
+      gap: 20,
       perPage: 3,
       interval: 3000,
-      padding: 100,
+      padding: 20,
       speed: 800,
       perMove: 1,
       pauseOnHover: false,
@@ -147,7 +147,7 @@ function ngForFunctionality() {
   anArray.forEach((post) => {
     value += `<li class="splide__slide">
     <div class="splide__slide__container">
-        <img class="img-card" src="${post}"  alt="Funghetto">
+        <img class="img-card" src="${post}">
     </div>
 </li>`;
   });
@@ -155,8 +155,6 @@ function ngForFunctionality() {
 }
 
 document.getElementById("text-2").addEventListener("click", function name() {
-  document.getElementById("div-coming").style.display = "none";
-
   setTimeout(function () {
     document.getElementById("text-2").style.color = "gold";
     document.getElementById("input-text").style.opacity = "1";
@@ -169,8 +167,6 @@ document.getElementById("text-2").addEventListener("click", function name() {
 });
 
 document.getElementById("text-3").addEventListener("click", function name() {
-  document.getElementById("div-coming").style.display = "none";
-
   setTimeout(function () {
     document.getElementById("text-3").style.color = "gold";
 
@@ -184,8 +180,6 @@ document.getElementById("text-3").addEventListener("click", function name() {
 });
 
 document.getElementById("text-4").addEventListener("click", function name() {
-  document.getElementById("div-coming").style.display = "none";
-
   setTimeout(function () {
     document.getElementById("text-4").style.color = "gold";
 
@@ -242,3 +236,5 @@ var x = setInterval(function () {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+particlesJS.load("particles-js", "/js/particlesjs-config.json");
