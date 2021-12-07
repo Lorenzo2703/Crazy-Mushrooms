@@ -90,7 +90,7 @@
 }
 
 #coming {
-  font-size: 35px;
+  font-size: 30px;
   padding: 30px;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
@@ -130,14 +130,14 @@ body {
 }
 
 .nero {
-  height: 200px;
-  z-index: 1;
+  height: 50px;
+  z-index: 100000;
   background-color: black;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   position: relative;
   top: -2px;
   margin-right: 0.5rem;
@@ -3820,7 +3820,7 @@ fieldset:disabled .btn {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   color: #64a19d;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -6642,7 +6642,7 @@ fieldset:disabled .btn {
 
 #treee {
   font-family: "Lobster Two" !important;
-  font-size: 35px !important;
+  font-size: 30px !important;
 }
 
 .visually-hidden,
@@ -11400,7 +11400,7 @@ body {
   }
   #mainNav .nav-link {
     transition: none;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     font-size: large;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.6);
@@ -11449,7 +11449,7 @@ body {
 
 #background-video {
   width: 100% !important;
-  height: 100%;
+  height: 100% !important;
   object-fit: cover;
   position: absolute;
   left: 0px;
@@ -11622,7 +11622,7 @@ body {
   }
 
   .nero {
-    height: 400px;
+    height: 300px;
     background-color: black;
   }
 
@@ -11666,7 +11666,6 @@ body {
   min-height: 140vh !important;
   height: 100%;
   width: 100% !important;
-  padding-bottom: 50px;
   position: relative !important;
   background: linear-gradient(
       to top,
@@ -11674,13 +11673,7 @@ body {
       rgba(0, 0, 0, 0) 95%,
       rgba(0, 0, 0, 0.9) 100%
     ),
-    url("../assets/img/Fucina\ Funghetti.png"),
-    linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.9) 95%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    url("../assets/img/Fucina\ Funghetti.png");
 }
 
 @media only screen and (max-width: 600px) {
@@ -11765,7 +11758,7 @@ body {
 
 .contact-section .card h4,
 .contact-section .card .h4 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11782,17 +11775,16 @@ body {
 }
 .contact-section .social a {
   text-align: center;
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
+  width: 5rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 100%;
-  line-height: 3rem;
-  font-size: x-large;
+  line-height: 5rem;
+  font-size: xx-large;
   color: rgba(255, 255, 255, 0.4);
 }
 .contact-section .social a:hover {
   color: rgba(255, 255, 255, 0.9);
-  font-size: x-large;
 }
 .contact-section .social a:active {
   color: #fff;
@@ -11825,12 +11817,12 @@ body {
   background-color: #5865f2;
 }
 
-#discord-top{
-  color: #5865F2;
+#discord-top {
+  color: #5865f2;
 }
 
-#discord-top:hover{
-  color: #583cFf;
+#discord-top:hover {
+  color: #583cff;
 }
 
 #insta:hover {
