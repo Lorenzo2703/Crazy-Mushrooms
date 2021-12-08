@@ -1,4 +1,3 @@
-var x = window.matchMedia("(max-width: 600px)");
 window.addEventListener("DOMContentLoaded", (event) => {
   // Navbar shrink function
 
@@ -22,8 +21,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Shrink the navbar when page is scrolled
   document.addEventListener("scroll", navbarShrink);
 
-  myFunction(x); // Call listener function at run time
-  document.addEventListener("change", myFunction(x)); // Attach listener function on state changes
+  myFunction(); // Call listener function at run time
+  document.addEventListener("change", myFunction()); // Attach listener function on state changes
 
   // Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector("#mainNav");
@@ -48,18 +47,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
-function myFunction(x) {
+function myFunction() {
+  var x = window.matchMedia("(max-width: 600px)");
   if (x.matches) {
     // If media query matches
     const splide = new Splide(".splide", {
       type: "loop",
       autoplay: true,
-      gap: 250,
+      gap: 20,
       perPage: 3,
-      interval: 3000,
-      padding: 250,
-      speed: 800,
-      perMove: 1,
+      interval: 4000,
+      padding: 20,
+      speed: 2000,
+      perMove: 3,
       pauseOnHover: false,
       resetProgress: false,
     }).mount();
@@ -72,12 +72,12 @@ function myFunction(x) {
     const splide1 = new Splide(".splide", {
       type: "loop",
       autoplay: true,
-      gap: 20,
+      gap: 70,
       perPage: 3,
-      interval: 3000,
-      padding: 20,
-      speed: 800,
-      perMove: 1,
+      interval: 4000,
+      padding: 70,
+      speed: 2000,
+      perMove: 3,
       pauseOnHover: false,
       resetProgress: false,
     }).mount();
@@ -90,20 +90,20 @@ function myFunction(x) {
 }
 
 window.onload = function () {
-  location.href = "#page-top";
+  location.href = "index.html#page-top";
 };
 
 var slideUp = {
   distance: "500%",
-  delay: 100,
+  delay: 500,
   duration: 1000,
   origin: "bottom",
   opacity: 0,
 };
-var slideUp1 = {
+var slideUp5 = {
   distance: "500%",
   duration: 1500,
-  delay: 300,
+  delay: 2000,
   origin: "bottom",
   opacity: 0,
 };
@@ -162,7 +162,7 @@ document.getElementById("text-2").addEventListener("click", function name() {
       "all 300ms linear;";
 
     document.getElementById("input-text").innerHTML =
-      '<h3 class=" text-white text-center p-1 mb-1"> PLAYING THE GAME</h3><strong>CRAZY MUSHROOMS</strong>\nCrazy mushrooms was created as a bridge between two extremely high yielding sectors: the\ngaming\nindustry and the crypto market.\nOur project is split into two main phases:\n\n* COLLECTING NFT;\n\n1. The first phase consists in the development of three-dimensional characters (NFT), animated\nand elaborated with care, every mushrooms will be developed through an algorithmic mixing\nstrategy, which grants SINGULARITY to each of them and DIFFERENT POWERS!\nThe characters will be dropped on the following marketplace, starting on 2nd Febrary 2022:\n-link-\n\n2. Throughout the duration of first phase the Treeelab team will provide for the users a brand\nnew game that features the use of the very MUSHROOMS! The game will be completely FREE TO PLAY,\nand, most importantly, available for IOS and Google Play! Crazy Mushrooms will give the\npossibility to EARN REAL MONEY to its players, by joining the platform\'s economic ecosystem.';
+      '<h3 class=" text-white text-center p-1 mb-1">CRAZY MUSHROOMS</h3>Crazy mushrooms was created as a bridge between two extremely high yielding sectors: the gaming industry and the crypto market.\nOur project is split into two main phases: <ul><li>COLLECTING NFT</li> <li>PLAYING THE GAME</li></ul><ol><li>The first phase consists in the development of three-dimensional characters (NFT), animated and elaborated with care, every mushrooms will be developed through an algorithmic mixing strategy,  which grants SINGULARITY to each of them and DIFFERENT POWERS! \n The characters will be dropped on the following marketplace, starting  on 2nd Febrary 2022: \n\n<u>-link COMING SOON-</u>\n\n</li><li>Throughout the duration of first phase the Treeelab team will provide for the users a brand new game that features the use of the very MUSHROOMS!   The game will be completely FREE TO PLAY, and, most importantly, available for IOS and Google Play! Crazy Mushrooms will give the possibility to EARN REAL MONEY to its players, by joining the platform\'s economic ecosystem.\n\nWELL… WHAT ARE YOU WAITING FOR?! GO CHECK OUT OUR SHROOMS!!!</li></ol>';
   }, 350);
 });
 
@@ -175,7 +175,7 @@ document.getElementById("text-3").addEventListener("click", function name() {
       "all 300ms linear;";
 
     document.getElementById("input-text").innerHTML =
-      '<h3 class=" text-white text-center p-1 mb-1">WHAT ARE YOU WAITING FOR?!</h3> GO CHECK OUT OUR SHROOMS!!!\nTHE MUSHROOMS\nARE YOU READY TO BECOME A MUSHROOM MASTER?\nCOLLECT THE RAREST CHARACTERS! BRING THEM INTO\nTHE GAME, CREATE YOUR ARMY, BECOME THE\nSTRONGEST OF YOUR KINGDOM AND THEN OF THE ENTIRE\nMUSHROOMVERSE!!';
+      '<h3 class=" text-white text-center p-1 mb-1">THE COLLECTIONS</h3>Our mushrooms are divided in collections, the second collection will be dropped only after the game launch:<ul><li>MAGIC Nation</li><li>Upcoming…</li></ul>*check the blockchain paragraph to know more about the single drops* \n*a collection is made by 10K NFT, the number of mushrooms varies in each drop (#500 in the 1st)* \n\nEvery collection contains mushrooms with different rarities and traits:<ul><li>1 golden rings (uncommon)</li> <li>2 golden rings (rare)</li><li>3 golden rings (epic)</li><li>4 golden rings (legend)</li></ul>';
   }, 350);
 });
 
@@ -188,7 +188,20 @@ document.getElementById("text-4").addEventListener("click", function name() {
       "all 300ms linear;";
 
     document.getElementById("input-text").innerHTML =
-      '<h3 class=" text-white text-center mb-1 p-1 text-uppercase">Collections </h3>Our mushrooms are divided in collections:\n1. MAGIC Nation\n2. ?? Upcoming…\n\nEvery collection contains mushrooms with different rarities and traits:\n* *\n*\n* *\n*\nOnly 2 deity (*)mushrooms will be dropped: the dates will be announced through\nour social channels, be sure to stay tuned!!\n-links-\n\n<strong> MUSHROOMS SHOULD NEVER KILL MUSHROOMS…\nBUT TO KEEP PEACE YOU MUST MOVE TO WAR…\nMushroom Ancient</strong>';
+      '<h3 class="text-white text-center mb-1 p-1">THE MUSHROOMS</h3><strong>Only 2 deity</strong>(unique base) mushrooms will be dropped: the dates will be announced through our social channels, make sure you stay tuned!! \n\nEvery mushrooms will be developed through an algorithmic mixing strategy, which grants SINGULARITY to each of them and DIFFERENT POWERS! \n\nThe legends are the “matrices”, crafted manually, the rarity of the others depends on the number of the same legendary. <strong>The mushrooms’ kind of set is established by the weapon.</strong> \n\n\n<h5>ARE YOU READY TO BECOME A MUSHROOM MASTER? \nCOLLECT THE RAREST CHARACTERS!\n BRING THEM INTO THE GAME,\n CREATE YOUR ARMY,\n BECOME THE STRONGEST OF YOUR KINGDOM AND THEN OF THE ENTIRE MUSHROOMVERSE!!</h5>';
+  }, 350);
+});
+
+document.getElementById("text-5").addEventListener("click", function name() {
+  setTimeout(function () {
+    document.getElementById("text-5").style.color = "gold";
+
+    document.getElementById("input-text").style.opacity = "1";
+    document.getElementById("input-text").style.transition =
+      "all 300ms linear;";
+
+    document.getElementById("input-text").innerHTML =
+      '<h3 class="text-white text-center mb-1 p-1">THE GAME</h3>The Crazy Mushrooms Game will be launched in the Q4 of 2022, the game is a RTS and the players get to face each other commanding their mushrooms armies. The first mode that will implemented is the PVP mode, the champaign mode will be added with future updates. In the PVP the match is divided into three main phases: \n\n-> Army setup\n-> Traps deployment\n-> Battle \n\n <uCheck the whitepaper to know more about it </u>';
   }, 350);
 });
 
@@ -196,6 +209,7 @@ window.addEventListener("mousedown", function name() {
   document.getElementById("text-2").style.color = "white";
   document.getElementById("text-3").style.color = "white";
   document.getElementById("text-4").style.color = "white";
+  document.getElementById("text-5").style.color = "white";
   document.getElementById("input-text").style.transition = "all 300ms linear;";
   document.getElementById("input-text").style.opacity = "0";
   document.getElementById("input-text").innerHTML = "";
@@ -203,13 +217,12 @@ window.addEventListener("mousedown", function name() {
 
 ngForFunctionality();
 
-ScrollReveal().reveal(".masthead-text", slideUp);
-ScrollReveal().reveal(".text-1", slideUp1);
+ScrollReveal().reveal(".text-5", slideUp5);
 ScrollReveal().reveal(".text-2", slideUp2);
 ScrollReveal().reveal(".text-3", slideUp3);
 ScrollReveal().reveal(".text-4", slideUp4);
 
-ScrollReveal().reveal(".best1", slideUp1);
+ScrollReveal().reveal(".best1", slideUp);
 ScrollReveal().reveal(".list", { delay: 500, duration: 1000 });
 
 var countDownDate = new Date("Feb 2, 2022 00:00:00").getTime();

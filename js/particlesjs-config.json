@@ -26,7 +26,7 @@
       }
     },
     "opacity": {
-      "value": 0.3,
+      "value": 1,
       "random": true,
       "anim": {
         "enable": false,
@@ -41,7 +41,7 @@
       "anim": {
         "enable": false,
         "speed": 0,
-        "size_min": 95,
+        "size_min": 100,
         "sync": false
       }
     },
