@@ -1,3 +1,8 @@
+window.onload = function () {
+  location.href = "index.html#page-top";
+  window.scrollTo(0, 0);
+};
+
 window.addEventListener("DOMContentLoaded", (event) => {
   // Navbar shrink function
 
@@ -89,14 +94,10 @@ function myFunction() {
   }
 }
 
-window.onload = function () {
-  location.href = "index.html#page-top";
-};
-
 var slideUp = {
   distance: "500%",
-  delay: 500,
-  duration: 1000,
+  delay: 200,
+  duration: 500,
   origin: "bottom",
   opacity: 0,
 };

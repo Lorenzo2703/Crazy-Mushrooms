@@ -11557,7 +11557,7 @@ body {
 #particles-js {
   position: absolute;
   width: 100% !important;
-  height: 153vh !important;
+  height: 150vh !important;
 }
 
 #input-text {
@@ -11655,6 +11655,15 @@ body {
   .top-btn {
     top: 350px;
     font-size: 8px;
+  }
+
+  #input-text {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  #input-text::before {
+    font-size: 13px;
   }
 
   .contact-section .social a {
