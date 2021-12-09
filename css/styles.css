@@ -11452,6 +11452,18 @@ body {
   border: 0;
 }
 
+.about-section {
+  height: 100vh !important;
+  width: 100% !important;
+  position: relative !important;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
 #background-video {
   width: 100% !important;
   height: 100% !important;
@@ -11461,6 +11473,18 @@ body {
   right: 0px;
   top: 0;
   bottom: 0;
+  z-index: -1;
+}
+
+#background-video1 {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
   z-index: -1;
 }
 
@@ -11539,9 +11563,9 @@ body {
 #input-text {
   opacity: 0;
   margin-bottom: 100px !important;
-  padding: 30px;
+  padding: 25px;
   transition: all 300ms linear;
-  font-size: 16px;
+  font-size: 17px;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -11585,7 +11609,7 @@ body {
   transform: translateX(-50%);
   padding: 12px;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   background: rgba(0, 0, 0, 1);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
@@ -11685,22 +11709,6 @@ body {
 
 .hero {
   position: relative;
-}
-
-.about-section {
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  min-height: 140vh !important;
-  height: 100%;
-  width: 100% !important;
-  position: relative !important;
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 95%,
-      rgba(0, 0, 0, 0.9) 100%
-    ),
-    url("../assets/img/Fucina\ Funghetti.png");
 }
 
 @media only screen and (max-width: 600px) {
