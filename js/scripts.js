@@ -5,12 +5,19 @@ window.onload = function () {
 
 function chsrc() {
   var winSize = window.innerWidth || document.body.clientWidth;
+  var time = new Date().getHours();
+
   if (winSize <= 568) {
     document.getElementById("background-video").style.display = "none";
-    document.getElementById("background-image").classList.remove("d-none");
+    if (time < 20 && time > 6) {
+      document.getElementById("background-image").classList.remove("d-none");
+    } else {
+      document.getElementById("background-image1").classList.remove("d-none");
+    }
   } else {
     document.getElementById("background-video").style.display = "block";
     document.getElementById("background-image").classList.add("d-none");
+    document.getElementById("background-image1").classList.add("d-none");
   }
 }
 
@@ -94,10 +101,10 @@ function myFunction() {
     const splide1 = new Splide(".splide", {
       type: "loop",
       autoplay: true,
-      gap: 70,
+      gap: 150,
       perPage: 3,
       interval: 4000,
-      padding: 70,
+      padding: 150,
       speed: 2000,
       perMove: 3,
       pauseOnHover: false,
@@ -242,29 +249,5 @@ ScrollReveal().reveal(".text-4", slideUp4);
 ScrollReveal().reveal(".road", slideUp2);
 ScrollReveal().reveal(".best1", slideUp);
 ScrollReveal().reveal(".list", { delay: 500, duration: 1000 });
-
-var countDownDate = new Date("Feb 2, 2022 00:00:00").getTime();
-var x = setInterval(function () {
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("countdown").innerHTML = "";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
 
 particlesJS.load("particles-js", "/js/particlesjs-config.json");

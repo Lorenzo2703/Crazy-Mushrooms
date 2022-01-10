@@ -287,6 +287,7 @@ hr {
 .main-timeline7 .description {
   font-size: 18px;
   color: #ddd;
+  min-height: 64px;
   line-height: 22px;
 }
 .main-timeline7 .timeline:nth-child(2) {
@@ -380,6 +381,61 @@ hr {
 .main-timeline7 .timeline:nth-child(4n) .title {
   color: #ed687c;
 }
+
+.main-timeline7 .timeline:nth-child(5n) .timeline-icon,
+.main-timeline7 .timeline:nth-child(5n):before {
+  background: #d8db1a;
+}
+.main-timeline7 .timeline:nth-child(5n) .timeline-icon:before {
+  border-color: #d8db1a;
+  border: 8px solid #282828;
+
+  box-shadow: 0 0 0 4px #fcff55;
+}
+.main-timeline7 .timeline:nth-child(5n) .year:before {
+  background: #d8db1a;
+  box-shadow: 0 0 0 4px #d8db1a;
+}
+.main-timeline7 .timeline:nth-child(5n) .title {
+  color: #d8db1a;
+}
+
+.main-timeline7 .timeline:nth-child(6n) .timeline-icon,
+.main-timeline7 .timeline:nth-child(6n):before {
+  background: #c93030;
+}
+.main-timeline7 .timeline:nth-child(6n) .timeline-icon:before {
+  border-color: #c93030;
+  border: 8px solid #282828;
+
+  box-shadow: 0 0 0 4px #ff4343;
+}
+.main-timeline7 .timeline:nth-child(6n) .year:before {
+  background: #c93030;
+  box-shadow: 0 0 0 4px #c93030;
+}
+.main-timeline7 .timeline:nth-child(6n) .title {
+  color: #c93030;
+}
+
+.main-timeline7 .timeline:nth-child(7n) .timeline-icon,
+.main-timeline7 .timeline:nth-child(7n):before {
+  background: #33aa3d;
+}
+.main-timeline7 .timeline:nth-child(7n) .timeline-icon:before {
+  border-color: #33aa3d;
+  border: 8px solid #282828;
+
+  box-shadow: 0 0 0 4px #38e747;
+}
+.main-timeline7 .timeline:nth-child(7n) .year:before {
+  background: #33aa3d;
+  box-shadow: 0 0 0 4px #33aa3d;
+}
+.main-timeline7 .timeline:nth-child(7n) .title {
+  color: #33aa3d;
+}
+
 @media only screen and (max-width: 990px) {
   .main-timeline7 .timeline {
     width: 100%;
@@ -11749,10 +11805,15 @@ body {
   z-index: -1;
 }
 
-#background-image {
+.road{
+  margin-top:150px;
+}
+
+#background-image,
+#background-image1 {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain;
+  object-fit: cover;
   position: absolute;
   left: 0px;
   right: 0px;
@@ -11842,7 +11903,7 @@ body {
 #particles-js {
   position: absolute;
   width: 100% !important;
-  height: 150vh !important;
+  height: 200vh !important;
 }
 
 #input-text {
