@@ -3,6 +3,30 @@ window.onload = function () {
   window.scrollTo(0, 0);
 };
 
+function chsrc() {
+  var winSize = window.innerWidth || document.body.clientWidth;
+  var time = new Date().getHours();
+
+  if (winSize <= 568) {
+    document.getElementById("background-video").style.display = "none";
+    if (time < 20 && time > 6) {
+      document.getElementById("background-image").classList.remove("d-none");
+    } else {
+      document.getElementById("background-image1").classList.remove("d-none");
+    }
+  } else {
+    document.getElementById("background-video").style.display = "block";
+    document.getElementById("background-image").classList.add("d-none");
+    document.getElementById("background-image1").classList.add("d-none");
+  }
+}
+
+chsrc();
+
+window.addEventListener("resize", (event) => {
+  chsrc();
+});
+
 window.addEventListener("DOMContentLoaded", (event) => {
   // Navbar shrink function
 
@@ -77,10 +101,10 @@ function myFunction() {
     const splide1 = new Splide(".splide", {
       type: "loop",
       autoplay: true,
-      gap: 70,
+      gap: 150,
       perPage: 3,
       interval: 4000,
-      padding: 70,
+      padding: 150,
       speed: 2000,
       perMove: 3,
       pauseOnHover: false,
@@ -163,7 +187,7 @@ document.getElementById("text-2").addEventListener("click", function name() {
       "all 300ms linear;";
 
     document.getElementById("input-text").innerHTML =
-      '<h3 class=" text-white text-center p-1 mb-1">CRAZY MUSHROOMS</h3>Crazy mushrooms was created as a bridge between two extremely high yielding sectors: the gaming industry and the crypto market.\nOur project is split into two main phases: <ul><li>COLLECTING NFT</li> <li>PLAYING THE GAME</li></ul><ol><li>The first phase consists in the development of three-dimensional characters (NFT), animated and elaborated with care, every mushrooms will be developed through an algorithmic mixing strategy,  which grants SINGULARITY to each of them and DIFFERENT POWERS! \n The characters will be dropped on the following marketplace:\n\n<u>-link COMING SOON-</u>\n\n</li><li>Throughout the duration of first phase the Treeelab team will provide for the users a brand new game that features the use of the very MUSHROOMS!   The game will be completely FREE TO PLAY, and, most importantly, available for IOS and Google Play! Crazy Mushrooms will give the possibility to EARN REAL MONEY to its players, by joining the platform\'s economic ecosystem.\n\nWELL… WHAT ARE YOU WAITING FOR?! GO CHECK OUT OUR SHROOMS!!!</li></ol>';
+      '<h3 class=" text-white text-center p-1 mb-1">CRAZY MUSHROOMS</h3>Crazy mushrooms was created as a bridge between two extremely high yielding sectors: the gaming industry and the crypto market.\nOur project is split into two main phases: <ul><li>COLLECTING NFT</li> <li>PLAYING THE GAME</li></ul><ol><li>The first phase consists in the development of three-dimensional characters (NFT), animated and elaborated with care, every mushrooms will be developed through an algorithmic mixing strategy,  which grants SINGULARITY to each of them and DIFFERENT POWERS! \n The characters will be dropped on the following marketplace\n\n<u>-link COMING SOON-</u>\n\n</li><li>Throughout the duration of first phase the Treeelab team will provide for the users a brand new game that features the use of the very MUSHROOMS!   The game will be completely FREE TO PLAY, and, most importantly, available for IOS and Google Play! Crazy Mushrooms will give the possibility to EARN REAL MONEY to its players, by joining the platform\'s economic ecosystem.\n\nWELL… WHAT ARE YOU WAITING FOR?! GO CHECK OUT OUR SHROOMS!!!</li></ol>';
   }, 350);
 });
 
@@ -222,32 +246,12 @@ ScrollReveal().reveal(".text-5", slideUp5);
 ScrollReveal().reveal(".text-2", slideUp2);
 ScrollReveal().reveal(".text-3", slideUp3);
 ScrollReveal().reveal(".text-4", slideUp4);
-
+ScrollReveal().reveal(".road", slideUp);
 ScrollReveal().reveal(".best1", slideUp);
+ScrollReveal().reveal(".charity", slideUp);
+ScrollReveal().reveal(".coming", slideUp);
+ScrollReveal().reveal(".h1-text", slideUp);
 ScrollReveal().reveal(".list", { delay: 500, duration: 1000 });
 
-var countDownDate = new Date("Feb 2, 2022 00:00:00").getTime();
-var x = setInterval(function () {
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("countdown").innerHTML = "";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
-  }
-}, 1000);
 
 particlesJS.load("particles-js", "/js/particlesjs-config.json");
