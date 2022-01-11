@@ -246,8 +246,11 @@ ScrollReveal().reveal(".text-5", slideUp5);
 ScrollReveal().reveal(".text-2", slideUp2);
 ScrollReveal().reveal(".text-3", slideUp3);
 ScrollReveal().reveal(".text-4", slideUp4);
-ScrollReveal().reveal(".road", slideUp2);
+ScrollReveal().reveal(".road", slideUp);
 ScrollReveal().reveal(".best1", slideUp);
+ScrollReveal().reveal(".charity", slideUp);
+ScrollReveal().reveal(".coming", slideUp);
+ScrollReveal().reveal(".h1-text", slideUp);
 ScrollReveal().reveal(".list", { delay: 500, duration: 1000 });
 
 particlesJS.load("particles-js", "/js/particlesjs-config.json");

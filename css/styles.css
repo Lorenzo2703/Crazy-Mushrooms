@@ -126,7 +126,7 @@ body {
 }
 
 .best1 {
-  margin-top: 100px !important;
+  margin-top: 150px !important;
   padding-top: 50px !important;
 }
 
@@ -435,6 +435,7 @@ hr {
 .main-timeline7 .timeline:nth-child(7n) .title {
   color: #33aa3d;
 }
+
 
 @media only screen and (max-width: 990px) {
   .main-timeline7 .timeline {
@@ -11805,8 +11806,8 @@ body {
   z-index: -1;
 }
 
-.road{
-  margin-top:150px;
+.road {
+  margin-top: 150px;
 }
 
 #background-image,
@@ -12059,7 +12060,7 @@ body {
 }
 
 .mt-custom1 {
-  margin-top: 60px;
+  margin-top: 65px;
 }
 
 .hero {
