@@ -253,4 +253,5 @@ ScrollReveal().reveal(".coming", slideUp);
 ScrollReveal().reveal(".h1-text", slideUp);
 ScrollReveal().reveal(".list", { delay: 500, duration: 1000 });
 
+
 particlesJS.load("particles-js", "/js/particlesjs-config.json");
