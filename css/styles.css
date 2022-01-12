@@ -11806,6 +11806,11 @@ body {
   z-index: -1;
 }
 
+#background-video::-webkit-media-controls{
+  display: none;
+  -webkit-appearance: none;
+}
+
 .road {
   margin-top: 150px;
 }
@@ -11833,6 +11838,10 @@ body {
   top: 0px;
   bottom: 0px;
   z-index: -1;
+}
+#background-video1::-webkit-media-controls{
+  display: none;
+  -webkit-appearance: none;
 }
 
 .masthead {
