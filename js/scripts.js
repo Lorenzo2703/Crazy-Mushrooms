@@ -84,11 +84,11 @@ function myFunction() {
       type: "loop",
       autoplay: true,
       gap: 20,
-      perPage: 3,
+      perPage: 2,
       interval: 4000,
       padding: 20,
       speed: 2000,
-      perMove: 3,
+      perMove: 2,
       pauseOnHover: false,
       resetProgress: false,
     }).mount();
