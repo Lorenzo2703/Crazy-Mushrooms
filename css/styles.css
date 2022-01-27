@@ -436,7 +436,6 @@ hr {
   color: #33aa3d;
 }
 
-
 @media only screen and (max-width: 990px) {
   .main-timeline7 .timeline {
     width: 100%;
@@ -11783,7 +11782,8 @@ body {
 }
 
 .about-section {
-  height: 100vh !important;
+  min-height: 100vh !important;
+  max-height: 100% !important;
   width: 100% !important;
   position: relative !important;
   background: linear-gradient(
@@ -11806,7 +11806,7 @@ body {
   z-index: -1;
 }
 
-#background-video::-webkit-media-controls{
+#background-video::-webkit-media-controls {
   display: none;
   -webkit-appearance: none;
 }
@@ -11839,7 +11839,7 @@ body {
   bottom: 0px;
   z-index: -1;
 }
-#background-video1::-webkit-media-controls{
+#background-video1::-webkit-media-controls {
   display: none;
   -webkit-appearance: none;
 }
